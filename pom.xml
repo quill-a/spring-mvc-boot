@@ -40,6 +40,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Needed to serve JSPs with Spring Boot. Otherwise, it downloads the JSP source to the user's system and
+        displays an error page. -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-jasper</artifactId>
+            <version>10.1.43</version>
+        </dependency>
     </dependencies>
 
     <build>
