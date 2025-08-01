@@ -13,14 +13,14 @@ public class HomeController {
     @RequestMapping("/")
     public String home() {
 
-        return "index.jsp";
+        return "index";
     }
 
     @RequestMapping("add")
     public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
 
         var modelAndView = new ModelAndView();
-        modelAndView.setViewName("result.jsp");
+        modelAndView.setViewName("result");
 
         int result = num1 + num2;
 
