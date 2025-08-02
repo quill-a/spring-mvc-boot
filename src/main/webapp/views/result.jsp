@@ -7,6 +7,6 @@
 </head>
 <body>
 <h1>Welcome to Quilla's Webapp!</h1>
-<p>Result is: ${result}</p>
+<p>Result is: ${alien}</p>
 </body>
 </html>

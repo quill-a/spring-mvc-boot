@@ -7,9 +7,9 @@
 </head>
 <body>
     <h1>Welcome to Quilla's Webapp!</h1>
-    <form action="add">
-        Enter 1st number: <input type="text" name="num1"><br>
-        Enter 2nd number: <input type="text" name="num2"><br>
+    <form action="addAlien">
+        Enter your ID: <input type="text" name="id"><br>
+        Enter your name: <input type="text" name="name"><br>
         <input type="submit">
     </form>
 </body>
