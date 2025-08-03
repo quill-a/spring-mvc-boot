@@ -22,17 +22,7 @@ public class HomeController {
         return "index";
     }
 
-//    @RequestMapping("add")
-//    public ModelAndView add(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-//
-//        var modelAndView = new ModelAndView("result");
-//
-//        int result = num1 + num2;
-//
-//        modelAndView.addObject("result", result);
-//
-//        return modelAndView;
-//    }
+    
 
     @PostMapping(value = "addAlien")
     public String addAlien(@ModelAttribute("alien1") Alien alien) {
