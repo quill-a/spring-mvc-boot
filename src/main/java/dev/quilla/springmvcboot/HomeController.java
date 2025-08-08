@@ -1,6 +1,7 @@
 package dev.quilla.springmvcboot;
 
 import dev.quilla.springmvcboot.model.Alien;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,9 @@ import java.util.List;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    AlienRepo repo;
 
     @ModelAttribute
     public void modelData(Model model) {
@@ -30,9 +34,7 @@ public class HomeController {
     @GetMapping("getAliens")
     public String getAliens(Model model) {
 
-        // Return a short list of "aliens" for prototyping purposes.
-        List<Alien> aliens = Arrays.asList(new Alien(111, "David"), new Alien(222, "Julia"));
-        model.addAttribute("result", aliens);
+        model.addAttribute("result", repo.findAll());
 
         return "showAliens";
     }

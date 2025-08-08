@@ -1,9 +1,20 @@
 package dev.quilla.springmvcboot.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "aliens")
 public class Alien {
 
+    @Id
     private int id;
     private String name;
+
+    public Alien() {
+
+    }
 
     public Alien(int id, String name) {
         this.id = id;
