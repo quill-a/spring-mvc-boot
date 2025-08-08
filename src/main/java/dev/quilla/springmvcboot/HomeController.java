@@ -4,10 +4,7 @@ import dev.quilla.springmvcboot.model.Alien;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,10 +36,22 @@ public class HomeController {
         return "showAliens";
     }
 
+    @GetMapping("getAlien")
+    public String getAlien(@RequestParam int id, Model model) {
+
+        repo
+
+        model.addAttribute("result", repo.getAlienById((id)));
+
+        return "showAliens";
+    }
+
     // Dynamically change what gets passed to the results page by using the ModelAttribute annotation in the method
     // definition, rather than manually adding the attribute to the model within the method body.
     @PostMapping(value = "addAlien")
     public String addAlien(@ModelAttribute("alien1") Alien alien) {
+
+        repo.save(alien);
 
         return "result";
     }
