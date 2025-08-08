@@ -39,9 +39,15 @@ public class HomeController {
     @GetMapping("getAlien")
     public String getAlien(@RequestParam int id, Model model) {
 
-        repo
-
         model.addAttribute("result", repo.getAlienById((id)));
+
+        return "showAliens";
+    }
+
+    @GetMapping("getAlienByName")
+    public String getAlienByName(@RequestParam String name, Model model) {
+
+        model.addAttribute("result", repo.findByName(name));  // Query DSL
 
         return "showAliens";
     }

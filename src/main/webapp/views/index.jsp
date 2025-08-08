@@ -14,7 +14,12 @@
 </form>
 <hr>
 <form action="getAlien">
-    Enter your ID: <input type="text" name="id"><br>
+    Enter an ID: <input type="text" name="id"><br>
+    <input type="submit">
+</form>
+<hr>
+<form action="getAlienByName">
+    Enter a Name: <input type="text" name="name"><br>
     <input type="submit">
 </form>
 </body>
