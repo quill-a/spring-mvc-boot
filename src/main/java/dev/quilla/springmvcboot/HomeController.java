@@ -33,7 +33,7 @@ public class HomeController {
         // Return a short list of "aliens" for prototyping purposes.
         List<Alien> aliens = Arrays.asList(new Alien(111, "David"), new Alien(222, "Julia"));
         model.addAttribute("result", aliens);
-        
+
         return "showAliens";
     }
 
